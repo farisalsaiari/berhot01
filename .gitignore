@@ -37,3 +37,20 @@ dist/
 /storage/state/**
 !/storage/state/**/
 !/storage/state/**/.gitkeep
+
+# Never commit new source corpora, personal records, or unreviewed intake.
+# Existing tracked intake files require a separate explicit history audit.
+/intake/**
+!/intake/README.md
+
+# Generated operational logs, quarantine objects, and released weights.
+/storage/logs/**
+!/storage/logs/**/
+!/storage/logs/**/.gitkeep
+/storage/quarantine/**
+!/storage/quarantine/**/
+!/storage/quarantine/**/.gitkeep
+/storage/releases/**
+!/storage/releases/**/
+!/storage/releases/**/.gitkeep
+

@@ -1,0 +1,1 @@
+"""Shared BERHOT services."""
