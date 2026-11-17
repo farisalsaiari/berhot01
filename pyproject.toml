@@ -14,5 +14,8 @@ dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["core", "services", "services.*"]
+include = ["berhot", "berhot.*", "core", "services", "services.*"]
 exclude = ["services.*.tests*", "tests*"]
+
+[project.scripts]
+berhot = "berhot.cli:main"

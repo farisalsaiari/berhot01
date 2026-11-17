@@ -31,3 +31,18 @@ capable of identifying affected experiments and models.
 Processing errors must quarantine/reject sources without silently admitting
 them to the training pool. Future multimodal processors share provenance and
 eligibility but keep their own media-specific extraction representations.
+
+
+## CLI orchestration in the current MVP
+
+The current unified command really calls the shared Data Factory, then
+revalidates its candidate manifest and processes JSM Nano UTF-8 bytes:
+
+    python -m berhot data inspect --manifest new-batch.json --intake-root intake
+    python -m berhot pipeline run --manifest new-batch.json --intake-root intake --family jsm --variant nano --size mvp
+
+The final result is only processed candidate text and a terminal token
+preview. No train-ready dataset, tokenizer fitting, neural training,
+post-training, independent evaluation or release occurs. No automatic
+filesystem watcher is running. Future model commands deliberately
+return NOT_IMPLEMENTED. See cli.md.

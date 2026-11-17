@@ -43,3 +43,19 @@ rights, build isolated train/validation/test shards, pin source+tokenizer
 hashes and publish immutable datasets under
 storage/data/datasets/jsm/<batch-id>/ before GPU training. This MVP
 demonstrates the dependency chain without making a false authorization.
+
+
+## Preferred BERHOT unified commands
+
+From repository root (the older direct MVP commands above also work):
+
+    python -m berhot pipeline smoke
+    python -m berhot tokenizer inspect --family jsm
+    python -m berhot tokenizer encode --family jsm --text "نص عربي English"
+    python -m berhot tokenizer preview --manifest storage/data/manifests/local-text/YOUR_BATCH.json
+    python -m berhot pipeline run --manifest new-batch.json --intake-root intake --family jsm --variant nano --size mvp
+
+The pipeline run command publishes only Data Factory processed candidates
+and prints a reversible UTF-8 token preview. It does NOT publish
+storage/data/datasets/jsm, train neural weights, or create checkpoints.
+Full usage and Windows manifest generation: ../../../../../docs/cli.md.

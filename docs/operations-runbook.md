@@ -24,3 +24,29 @@ holdout reports to make a new experiment succeed.
 
 No production release procedure is implemented. Infrastructure README files
 describe plans, not running deployments.
+
+
+## Unified BERHOT operator commands
+
+    python -m berhot --help
+    python -m berhot data smoke
+    python -m berhot pipeline smoke
+    python -m berhot tokenizer inspect --family jsm
+    python -m berhot model list
+
+New explicit permitted UTF-8 text batch:
+
+    python -m berhot data inspect --manifest new-batch.json --intake-root intake
+    python -m berhot data process --manifest new-batch.json --intake-root intake
+    python -m berhot tokenizer preview --manifest storage/data/manifests/local-text/YOUR_BATCH.json
+
+One command to process and preview:
+
+    python -m berhot pipeline run --manifest new-batch.json --intake-root intake
+
+All these results remain candidate data, NOT training-ready. The
+eligibility check reports blocked status:
+
+    python -m berhot data eligibility --manifest storage/data/manifests/local-text/YOUR_BATCH.json
+
+See cli.md for a complete PowerShell SHA-256 and manifest example.

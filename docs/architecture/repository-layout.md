@@ -39,3 +39,18 @@ The root shared Python package is core for the current monorepo.
 Eventually a distribution named berhot_core reduces namespace collisions.
 For JSM prefer an installed berhot_jsm package under models/jsm/src/.
 Do not rewrite historical experimental checkpoint code to match scaffolding.
+
+
+## Universal CLI entry point
+
+The berhot/ Python package is now the common operator interface:
+
+    python -m berhot data inspect --manifest FILE --intake-root intake
+    python -m berhot data process --manifest FILE --intake-root intake
+    python -m berhot pipeline run --manifest FILE --intake-root intake
+    python -m berhot tokenizer preview --manifest PUBLISHED_MANIFEST
+
+The CLI routes to services/data_factory and JSM Nano modules; it does
+not contain a neural training loop. Registered future model commands
+fail closed, rather than pretending to train or serve model weights.
+For exact commands and current behavior, see ../cli.md.

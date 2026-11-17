@@ -48,3 +48,27 @@ Not implemented: authenticated rights approval, PDF/DOCX extraction, image,
 audio/video/3D processing, semantic dedup, PII or malware scanning, model
 training, frozen train/validation/test releases, cloud object-store writes.
 A separate authorized dataset release is required before GPU training.
+
+
+## Universal operator CLI (recommended)
+
+From repository root:
+
+    python -m berhot data smoke
+    python -m berhot data inspect --manifest batch.json --intake-root intake
+    python -m berhot data process --manifest batch.json --intake-root intake
+    python -m berhot data process --manifest batch.json --intake-root intake --dry-run
+    python -m berhot data eligibility --family jsm --manifest storage/data/manifests/local-text/operator-batch-0001.json
+
+The inspect command is read-only. Process creates immutable candidate
+text, NOT an approved training dataset. Eligibility reports BLOCKED.
+The future publishing operation is registered but NOT IMPLEMENTED:
+
+    python -m berhot data publish --batch operator-batch-0001 --family jsm
+
+One connected text-to-JSM-Nano preview command:
+
+    python -m berhot pipeline run --manifest batch.json --intake-root intake --family jsm --variant nano --size mvp
+
+See ../../docs/cli.md for a PowerShell manifest generator that pins the
+true source SHA-256 and emits UTF-8 JSON without a BOM.
