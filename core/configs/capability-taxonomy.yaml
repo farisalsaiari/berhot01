@@ -1,0 +1,16 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+families: [jsm, fann, nabra, bahr, edrak, sora]
+example_domains:
+  jsm: [arabic, coding, mathematics, reasoning, tools]
+  fann: [geometry, uv, texture, rigging, animation]
+  nabra: [asr, tts, pronunciation]
+  bahr: [temporal_coherence, motion, video_editing]
+  edrak: [perception, planning, simulation, control]
+  sora: [composition, rendering, image_editing]
+metrics_require:
+  - model_version
+  - evaluation_id
+  - sample_size
+  - confidence_interval

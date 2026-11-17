@@ -1,0 +1,39 @@
+.venv/
+.vscode/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+# Local storage payloads: retain directories and scaffold markers only.
+/storage/data/**
+!/storage/data/**/
+!/storage/data/**/.gitkeep
+/storage/memory/**
+!/storage/memory/**/
+!/storage/memory/**/.gitkeep
+/storage/artifacts/**
+!/storage/artifacts/**/
+!/storage/artifacts/**/.gitkeep
+/storage/incoming/**
+!/storage/incoming/**/
+!/storage/incoming/**/.gitkeep
+/storage/cache/**
+!/storage/cache/**/
+!/storage/cache/**/.gitkeep
+/storage/tmp/**
+!/storage/tmp/**/
+!/storage/tmp/**/.gitkeep
+
+# Local configuration and credentials.
+.env
+.env.*
+!.env.example
+/storage/r2.local.json
+
+# Proposed durable local state: never track databases, logs, backups or secrets.
+/storage/state/**
+!/storage/state/**/
+!/storage/state/**/.gitkeep

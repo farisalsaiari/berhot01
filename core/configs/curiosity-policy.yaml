@@ -1,0 +1,9 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+max_questions_per_cycle: 10
+max_active_research_tasks: 2
+require_evidence_linked_gap: true
+require_testable_hypothesis: true
+forbid_unbounded_web_exploration: true
+exclude_sensitive_personal_profiling: true

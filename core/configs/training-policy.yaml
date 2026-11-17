@@ -1,0 +1,11 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+automatic_neural_training: false
+require_dataset_eligibility: true
+require_replay_coverage: true
+require_versioned_baseline_checkpoint: true
+require_approved_compute_budget: true
+require_isolated_training_job: true
+allowed_methods_for_future_review: [lora, fine_tuning, continued_pretraining]
+never_modify_live_model_weights_in_place: true

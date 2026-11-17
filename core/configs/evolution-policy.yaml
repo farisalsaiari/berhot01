@@ -1,0 +1,10 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+enable_agent_variants: false
+require_sandbox: true
+allow_core_safety_code_self_modification: false
+allow_permission_self_escalation: false
+allow_evaluator_self_modification: false
+require_variant_lineage: true
+require_independent_tournament: true

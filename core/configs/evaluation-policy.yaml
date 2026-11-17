@@ -1,0 +1,11 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+require_independent_evaluator: true
+require_frozen_hidden_holdout: true
+require_baseline_comparison: true
+require_training_evaluation_separation: true
+require_regression_suites: true
+require_uncertainty_and_repeat_runs: true
+block_if_safety_regresses: true
+block_if_regressions_exceed_policy: true

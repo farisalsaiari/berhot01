@@ -1,0 +1,15 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+sandbox:
+  required: true
+  network_enabled_by_default: false
+  production_credentials_available: false
+  writable_host_paths: []
+  max_duration_seconds: 300
+  max_concurrent_jobs: 2
+  max_memory_mb: 1024
+checks:
+  require_reproducible_seed: true
+  require_independent_result_verifier: true
+  block_untrusted_source_instructions: true

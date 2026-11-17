@@ -1,0 +1,11 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+default_training_allowed: false
+require_documented_license_or_consent: true
+require_source_provenance: true
+require_immutable_shard_hashes: true
+require_deduplication: true
+separate_train_validation_test: true
+detect_synthetic_data_contamination: true
+retain_revocation_lineage: true

@@ -1,0 +1,7 @@
+# Policy design reference. This YAML is not enforced by runtime yet.
+schema_version: "1.0.0"
+defaults:
+  analysis_allowed: false
+  retention_allowed: false
+  training_allowed: false
+  model_export_allowed: false

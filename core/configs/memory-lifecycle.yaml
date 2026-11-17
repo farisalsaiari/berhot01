@@ -1,0 +1,10 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+default_retention_allowed: false
+require_source_rights_and_provenance: true
+keep_candidate_separate_from_verified: true
+keep_temporal_fact_history: true
+enforce_rights_revocation_downstream: true
+backup_before_database_migration: true
+never_treat_tmp_as_durable_memory: true

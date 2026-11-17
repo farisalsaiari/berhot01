@@ -1,0 +1,9 @@
+# Planned family names; not a runtime registry yet.
+schema_version: "1.0.0"
+model_families:
+  - jsm
+  - sora
+  - fann
+  - nabra
+  - bahr
+  - edrak

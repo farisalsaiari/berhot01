@@ -1,0 +1,11 @@
+# Planned deployment configuration. Current SQLite MVP does not load this YAML.
+schema_version: "1.0.0"
+development:
+  backend: sqlite
+  database_path: storage/tmp/memory/berhot.sqlite3
+production:
+  backend: postgresql  # Not implemented yet
+objects:
+  local_prefix: storage/memory
+  r2_bucket: berhot-memory
+  r2_prefix: ""

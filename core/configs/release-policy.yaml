@@ -1,0 +1,10 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+automatic_production_release: false
+require_signed_candidate_manifest: true
+require_independent_evaluation: true
+require_security_review: true
+require_human_release_approval: true
+require_canary_and_rollback: true
+require_immutable_previous_release: true

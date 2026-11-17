@@ -1,0 +1,92 @@
+{
+  "en-01.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-02.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-03.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-04.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-05.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-06.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-07.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-08.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-09.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-10.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-11.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "en-12.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-01.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-02.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-03.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-04.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-05.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  },
+  "ar-06.txt": {
+    "train_allowed": true,
+    "rights": "original",
+    "source_url": null
+  }
+}

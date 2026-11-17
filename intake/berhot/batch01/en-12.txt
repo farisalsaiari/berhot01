@@ -1,0 +1,143 @@
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.
+
+Question: What is learning?
+Answer: Learning means gaining knowledge.
+
+Question: What is training?
+Answer: Training helps a model predict tokens.
+
+Question: What is a token?
+Answer: A token is a piece of text.
+
+Question: What is a model?
+Answer: A model is a function with learned weights.

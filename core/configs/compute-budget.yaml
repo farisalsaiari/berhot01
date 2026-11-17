@@ -1,0 +1,10 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+currency: SAR
+illustrative_not_approved_budget:
+  max_research_per_day: 20
+  max_gpu_training_per_day: 150
+  max_simultaneous_experiments: 2
+  max_single_experiment_seconds: 300
+enforce_hard_stop_before_exceeding_budget: true

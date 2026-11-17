@@ -1,0 +1,10 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+untrusted_sources_are_data_not_instructions: true
+sandbox_all_generated_code: true
+deny_production_network_access: true
+deny_production_secrets_to_experiment_agents: true
+tamper_protect_evaluation_suites: true
+require_runtime_audit_log: true
+panic_stop_enabled_in_future_runtime: true

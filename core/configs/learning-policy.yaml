@@ -1,0 +1,17 @@
+# DRAFT ARCHITECTURE POLICY: NOT ENFORCED BY CURRENT RUNTIME.
+schema_version: "1.0.0"
+implementation_status: design_only_not_enforced
+learning:
+  automatic_signal_collection: false
+  automatic_research: false
+  automatic_memory_updates: false
+  automatic_experiments: false
+  automatic_neural_training: false
+  automatic_production_release: false
+gates:
+  require_verified_source: true
+  require_independent_evaluation: true
+  require_signed_policy: true
+  require_manual_release_approval: true
+  fail_closed_on_unknown_rights: true
+min_repeated_failed_tests: 3
