@@ -1,37 +1,26 @@
-# Local storage workspace
+# BERHOT local storage workspace
 
-This directory is the local counterpart of company object storage.
-See the [storage guide](../docs/storage.md) for naming, lifecycle, examples,
-and terminal commands for R2.
+The global root is defined by core/paths.py and may be placed outside OneDrive
+with BERHOT_STORAGE_DIR. Git ignores generated corpora, checkpoints, logs,
+state, quarantine and released model files.
 
-| Local directory | Proposed destination | Purpose |
-| --- | --- | --- |
-| `data/` | `s3://berhot-data/` | Raw, processed, curated datasets, catalogs, manifests, splits, templates |
-| `memory/` | `s3://berhot-memory/` | Shared evidence, model views and memory snapshots |
-| `artifacts/` | `s3://berhot-artifacts/` | Checkpoints and outputs for every family |
-| `incoming/` | Local only | Incomplete downloads and unreviewed imports |
-| `cache/` | Local only | Re-downloadable datasets and models |
-| `tmp/` | Local only | Disposable processing scratch space |
+- data/incoming: untrusted intake batches.
+- data/raw: future source-preserving object store.
+- data/processed: candidate Data Factory output (NOT training authorized).
+- data/manifests: source/provenance and processing manifests.
+- data/datasets/<family>/<batch-id>: future frozen APPROVED training releases.
+- artifacts/jsm/tokenizers/<version>: family-shared tokenizer versions.
+- artifacts/<family>/<variant>/<size>/runs/<run-id>: weights and run metrics.
+- releases/<family>: future reviewed model deployments.
+- memory: future sourced memory export data.
+- state: durable databases, requiring database-aware backup.
+- logs: service operational logs.
+- cache, tmp: local transient files.
+- quarantine: suspicious/rejected sources requiring review.
 
-Payload files in these directories are ignored by Git. Only `.gitkeep` files
-preserve the directory scaffold. Put documentation and configuration intended for
-Git in `docs/`, `configs/`, `tests/fixtures/`, or model directories instead.
-All generated catalogs, manifests, splits and dataset templates belong under
-`storage/data/` (ignored by Git except for `.gitkeep` markers).
-The existing MVP assets remain in their original MVP locations until migration.
+Private Cloudflare R2 bucket mappings in r2.example.json are only a plan.
+Never sync the whole repository or a live SQLite database indiscriminately.
+If any previous prototype database lives in storage/tmp, DO NOT delete it
+without verifying and migrating its backups first.
 
-The three R2 bucket names are proposals. No buckets, credentials, or uploads have been
-configured. `r2.example.json` records the planned mapping; it is documentation,
-not automatically loaded by training code or sync commands.
-
-Only `storage/data/`, `storage/memory/` and `storage/artifacts/` are future upload roots. Do not sync the
-whole repository or `storage/` root.
-
-## Autonomous-learning architecture extension (proposed)
-
-- `data/datasets/<family>/<release>/`: frozen training-ready releases, **not the existing current data factory extraction output**. Payloads remain ignored by Git.
-- `memory/capabilities/`, `memory/curiosity/`, `memory/learning-history/`: future exported model capability records, research questions and audit receipts. The authoritative live database would be a trusted service.
-- `state/`: proposed durable LOCAL databases and backups. No active SQLite DB was moved; this folder must never be included in future generic R2 sync.
-- `artifacts/sora/`: placeholder for a provisional image/design family; brand/name still subject to review.
-
-**Critical:** Until a tested DB migration occurs, the real SQLite prototype lives under `storage/tmp/memory/berhot.sqlite3`. Do NOT assume this DB is disposable merely because of its path. See [runbook](../docs/operations-runbook.md) and [Pipeline](../docs/pipeline-end-to-end.md).
+See ../docs/storage.md.
