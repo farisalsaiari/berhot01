@@ -19,13 +19,19 @@ jobs:
       - name: Install package
         run: python -m pip install -e .
       - name: Compile
-        run: python -m compileall -q core services tests
+        run: python -m compileall -q berhot core services tests
       - name: Run tests
         run: python -m unittest discover -s tests -v
       - name: Local pipeline smoke
         run: python -m services.data_factory.src.cli smoke-local
       - name: JSM Nano bridge smoke
         run: python -m models.jsm.variants.nano.mvp.scripts.data_pipeline smoke
+      - name: Unified factory smoke
+        run: python -m berhot data smoke
+      - name: Unified full pipeline smoke
+        run: python -m berhot pipeline smoke
+      - name: Unified tokenizer inspect
+        run: python -m berhot tokenizer inspect --family jsm
   windows:
     runs-on: windows-latest
     steps:
@@ -36,10 +42,16 @@ jobs:
       - name: Install package
         run: python -m pip install -e .
       - name: Compile
-        run: python -m compileall -q core services tests
+        run: python -m compileall -q berhot core services tests
       - name: Run tests
         run: python -m unittest discover -s tests -v
       - name: Local pipeline smoke
         run: python -m services.data_factory.src.cli smoke-local
       - name: JSM Nano bridge smoke
         run: python -m models.jsm.variants.nano.mvp.scripts.data_pipeline smoke
+      - name: Unified factory smoke
+        run: python -m berhot data smoke
+      - name: Unified full pipeline smoke
+        run: python -m berhot pipeline smoke
+      - name: Unified tokenizer inspect
+        run: python -m berhot tokenizer inspect --family jsm

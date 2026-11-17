@@ -90,3 +90,36 @@ This exercises actual Data Factory processing, validates immutable
 candidate output, previews the real reversible JSM byte tokenizer, and
 prints why train-ready release is intentionally blocked. No GPU, training
 or models are involved. Details: models/jsm/variants/nano/mvp/README.md.
+
+
+## BERHOT universal CLI (working local MVP)
+
+The preferred entry point for all operator scripts is python -m berhot.
+Install it from the repository root with python -m pip install -e .
+
+    python -m berhot --help
+    python -m berhot data smoke
+    python -m berhot data inspect --manifest new-batch.json --intake-root intake
+    python -m berhot data process --manifest new-batch.json --intake-root intake
+    python -m berhot pipeline smoke
+    python -m berhot pipeline run --manifest new-batch.json --intake-root intake
+    python -m berhot tokenizer inspect --family jsm
+    python -m berhot tokenizer encode --family jsm --text "مرحباً BERHOT"
+    python -m berhot model list
+
+Only text Data Factory and JSM Nano candidate token preview are operational.
+The pipeline does NOT publish an approved training dataset or train weights.
+
+Future command conventions are registered but deliberately NOT IMPLEMENTED
+and return a nonzero status:
+
+    python -m berhot data publish --batch batch-001 --family jsm
+    python -m berhot tokenizer train --family jsm --dataset jsm-batch-001
+    python -m berhot model train --model jsm/lara/30b --config lara-30b.yaml --dataset jsm-batch-001 --tokenizer jsm-v1
+    python -m berhot model evaluate --run run-001
+    python -m berhot model infer --model jsm/lara/30b --prompt "Hello"
+    python -m berhot model posttrain --model jsm/lara/30b --config sft.yaml
+    python -m berhot model register --run run-001
+
+Read docs/cli.md for the full Windows PowerShell manifest-creation guide,
+actual command status table, paths and future model-family extension rules.
