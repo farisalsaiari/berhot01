@@ -24,6 +24,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Local pipeline smoke
         run: python -m services.data_factory.src.cli smoke-local
+      - name: JSM Nano bridge smoke
+        run: python -m models.jsm.variants.nano.mvp.scripts.data_pipeline smoke
   windows:
     runs-on: windows-latest
     steps:
@@ -39,3 +41,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Local pipeline smoke
         run: python -m services.data_factory.src.cli smoke-local
+      - name: JSM Nano bridge smoke
+        run: python -m models.jsm.variants.nano.mvp.scripts.data_pipeline smoke

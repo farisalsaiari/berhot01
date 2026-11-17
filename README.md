@@ -79,3 +79,14 @@ as a separate reviewed migration. No historical data was deleted here.
 - services/data_factory/README.md
 
 Model-specific training runs and prior experiments remain unchanged.
+
+
+## JSM Nano MVP data connection (print-only)
+
+    python -m models.jsm.variants.nano.mvp.scripts.data_pipeline paths
+    python -m models.jsm.variants.nano.mvp.scripts.data_pipeline smoke
+
+This exercises actual Data Factory processing, validates immutable
+candidate output, previews the real reversible JSM byte tokenizer, and
+prints why train-ready release is intentionally blocked. No GPU, training
+or models are involved. Details: models/jsm/variants/nano/mvp/README.md.
