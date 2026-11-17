@@ -104,7 +104,7 @@ class CandidateBridgeTests(unittest.TestCase):
         paths = json.loads(output.getvalue())
         self.assertEqual(
             paths["jsm_training_datasets_dir"],
-            str(self.storage / "data" / "datasets" / "jsm"),
+            str(self.storage.resolve() / "data" / "datasets" / "jsm"),
         )
 
     def test_manifests_outside_canonical_directory_rejected(self):
